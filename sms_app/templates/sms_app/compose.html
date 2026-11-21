@@ -1,0 +1,24 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Compose SMS</title>
+    <link rel="stylesheet" href="{% static 'sms_app/compose.css' %}">
+</head>
+<body>
+    <main>
+        <h1>Compose SMS</h1>
+        <p>SMS delivery will be available once a provider is connected.</p>
+        {% if submitted %}
+            <p class="status" role="status">Form received. No SMS was sent.</p>
+        {% endif %}
+        <form method="post" action="{% url 'sms_app:compose' %}">
+            {% csrf_token %}
+            {{ form.as_div }}
+            <button type="submit">Send SMS</button>
+        </form>
+    </main>
+</body>
+</html>

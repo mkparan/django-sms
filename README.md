@@ -6,7 +6,8 @@ IT 120 – Integrative Programming and Technologies group assignment. The applic
 
 - Python 3.13 and Django 5.2 LTS
 - SQLite for local development
-- HTML/CSS and an SMS provider in later phases
+- HTML/CSS for the SMS form
+- SMS provider integration planned for a later phase
 
 ## Local setup on Windows
 
@@ -47,8 +48,8 @@ python manage.py migrate
 python manage.py runserver
 ```
 
-Open http://127.0.0.1:8000/ to see the Django welcome page. Press Ctrl+C to stop the server.
+Open http://127.0.0.1:8000/ to see the SMS form. Enter a sample phone number and message, then select **Send SMS** to check how the form handles a submission. Press Ctrl+C to stop the server.
 
 ## Development status
 
-Phase 1 sets up the Django project, registers the `sms_app` app, and uses Django's default SQLite database. The SMS form and provider integration are planned for later phases.
+Phase 1 set up Django and SQLite. Phase 2 adds the SMS composition form with required fields and CSRF protection. Submitting the form exercises the local Django view. SMS delivery and phone-number format validation are planned for later phases.

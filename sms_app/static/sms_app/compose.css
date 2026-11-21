@@ -1,0 +1,87 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: clamp(1rem, 5vw, 3rem) 1rem;
+    background: #eef2f6;
+    color: #182439;
+    font: 1rem/1.5 system-ui, sans-serif;
+}
+
+main {
+    max-width: 34rem;
+    margin: 0 auto;
+    padding: clamp(1.25rem, 5vw, 2.5rem);
+    background: #fff;
+    border: 1px solid #d3dce7;
+    border-radius: 1rem;
+}
+
+h1 {
+    margin: 0;
+    line-height: 1.2;
+}
+
+p {
+    margin: .75rem 0 1.5rem;
+}
+
+form > div {
+    margin-bottom: 1.25rem;
+}
+
+label {
+    display: block;
+    margin-bottom: .35rem;
+    font-weight: 600;
+}
+
+.helptext {
+    margin-bottom: .35rem;
+    color: #465870;
+    font-size: .9rem;
+}
+
+input, textarea, button {
+    font: inherit;
+}
+
+input, textarea {
+    display: block;
+    width: 100%;
+    padding: .65rem .75rem;
+    border: 1px solid #687991;
+    border-radius: .4rem;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    padding: .65rem 1rem;
+    border: 0;
+    border-radius: .4rem;
+    background: #174d86;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+:focus-visible {
+    outline: 3px solid #216abb;
+    outline-offset: 3px;
+}
+
+.errorlist {
+    color: #a12828;
+    padding-left: 1.25rem;
+}
+
+.status {
+    padding: .75rem;
+    border-radius: .4rem;
+    background: #eef5ff;
+}
